@@ -14,7 +14,8 @@ define([
     },
 
     appRoutes: {
-      '' : 'index',
+      ''          : 'index',
+      'workspace' : 'workspace',
     },
 
   });
