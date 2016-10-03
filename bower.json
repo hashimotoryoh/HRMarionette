@@ -12,6 +12,7 @@
     "requirejs": "2.1.15",
     "handlebars": "2.0.0",
     "backbone-super": "1.0.2",
-    "requirejs-hbs": "^0.1.1"
+    "requirejs-hbs": "^0.1.1",
+    "requirejs-text": "2.0.12"
   }
 }
