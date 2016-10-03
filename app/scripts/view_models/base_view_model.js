@@ -1,7 +1,7 @@
 define([
-  'backbone.marionette'
+  'backbone'
 ], function(
-  Marionette
+  Backbone
 ) {
 
   'use strict';
@@ -12,13 +12,13 @@ define([
    *
    * @class   BaseViewModel
    * @module  ViewModel
-   * @extends BaseViewModel
+   * @extends Marionette.Model
    */
-  var BaseViewModel = Marionette.Model.extend({
+  var BaseViewModel = Backbone.Model.extend({
 
     initialize: function()
     {
-      console.log('base view model');
+      this._super();
     },
 
   });

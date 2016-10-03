@@ -14,6 +14,7 @@ define([
     },
 
     appRoutes: {
+      '' : 'index',
     },
 
   });

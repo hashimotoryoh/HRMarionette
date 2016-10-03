@@ -18,9 +18,11 @@ define([
    */
   var BaseView = Marionette.ItemView.extend({
 
-    initialize: function()
+    isRender : true,
+
+    render: function()
     {
-      console.log('base view');
+      if (this.isRender) return this._super();
     },
 
   });

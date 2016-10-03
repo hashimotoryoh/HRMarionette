@@ -1,7 +1,7 @@
-require([
+define([
   'backbone',
   'backbone.marionette',
-  'routers/router_factory'
+  'routers/router_factory',
 ], function(
   Backbone,
   Marionette,
