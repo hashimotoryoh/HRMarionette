@@ -71,26 +71,24 @@ define([
       if (typeof key === 'object') {
         var attr = key;
 
-        if (_.has(attr, 'type'))
-          isTypeError = !_.contains(_.values(this.Type), attr.type);
-        if (_.has(attr, 'dataType'))
-          isDataTypeError = !_.contains(_.values(this.DataType), attr.dataType);
+        if (_.has(attr, 'type') && !_.contains(_.values(this.Type), attr.type)) {
+          this._super({ 'type' : this.defaults.type });
+          throw new Error('リクエストタイプが不正です。: '+String(attr.type));
+        }
+        if (_.has(attr, 'dataType') && !_.contains(_.values(this.DataType), attr.dataType)) {
+          this._super({ 'dataType' : this.defaults.dataType });
+          throw new Error('リクエストデータタイプが不正です。: '+String(attr.dataType));
+        }
       }
       else {
-        if (key === 'type')
-          isTypeError = !_.contains(_.values(this.Type), value);
-        if (key === 'dataType')
-          isDataTypeError = !_.contains(_.values(this.DataType), value);
-      }
-
-      // バリデーションエラーなら、defaultsの値で上書いてエラーを投げる
-      if (isTypeError) {
-        this.set({ 'type' : this.defaults.type });
-        throw new Error('リクエストタイプが不正です。: '+String(type));
-      }
-      if (isDataTypeError) {
-        this.set({ 'dataType' : this.defaults.dataType });
-        throw new Error('リクエストデータタイプが不正です。: '+String(dataType));
+        if (key === 'type' && !_.contains(_.values(this.Type), value)) {
+          this._super({ 'type' : this.defaults.type });
+          throw new Error('リクエストタイプが不正です。: '+String(value));
+        }
+        if (key === 'dataType' && !_.contains(_.values(this.DataType), value)) {
+          this._super({ 'dataType' : this.defaults.dataType });
+          throw new Error('リクエストデータタイプが不正です。: '+String(value));
+        }
       }
     },
 

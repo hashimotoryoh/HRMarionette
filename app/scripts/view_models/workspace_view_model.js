@@ -29,10 +29,12 @@ define([
         url : 'https://jsonplaceholder.typicode.com/posts',
       });
 
+      console.log(request.get('type'));
+
       console.log('send');
       HttpClient.send(request).then(function(response) {
         console.log('response');
-        console.log(response);
+        // console.log(response);
       },
       function(err) {
         console.error(err);
