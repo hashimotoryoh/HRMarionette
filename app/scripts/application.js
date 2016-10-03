@@ -16,6 +16,7 @@ define([
 
   Application.addInitializer(function() {
 
+    // ルーターを生成し、URLの監視を開始する
     Application.router = RouterFactory.makeRouter(location.pathname);
     Backbone.history.start();
 
@@ -23,7 +24,7 @@ define([
       // options.silent はデフォルトで`false`
       options.silent = _.has(options, 'silent') ? options.silent : false;
 
-      // option.silent が`true`なら、URLのみ変更し描画はしない。
+      // option.silent が`true`なら、URLのみ変更し描画はしない
       Application.router.navigate('#'+route, !options.silent);
     });
 

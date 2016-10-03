@@ -8,14 +8,10 @@ define([
 
   'use strict';
 
+
   var Commander = Marionette.Controller.extend({
 
-    // command : new Backbone.Wreqr.Commands(),
-
-    initialize: function()
-    {
-      this.command  = new Backbone.Wreqr.Commands();
-    },
+    command : new Backbone.Wreqr.Commands(),
 
   });
 
