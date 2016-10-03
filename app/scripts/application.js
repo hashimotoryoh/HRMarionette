@@ -2,10 +2,12 @@ define([
   'backbone',
   'backbone.marionette',
   'routers/router_factory',
+  'commander'
 ], function(
   Backbone,
   Marionette,
-  RouterFactory
+  RouterFactory,
+  Commander
 ) {
 
   'use strict';
@@ -16,6 +18,14 @@ define([
 
     Application.router = RouterFactory.makeRouter(location.pathname);
     Backbone.history.start();
+
+    Commander.command.setHandler('route', function(route, options={}) {
+      // options.silent はデフォルトで`false`
+      options.silent = _.has(options, 'silent') ? options.silent : false;
+
+      // option.silent が`true`なら、URLのみ変更し描画はしない。
+      Application.router.navigate('#'+route, !options.silent);
+    });
 
   });
 

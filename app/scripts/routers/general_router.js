@@ -9,10 +9,6 @@ define([
 
   var GeneralRouter = Marionette.AppRouter.extend({
 
-    initialize: function()
-    {
-    },
-
     appRoutes: {
       ''          : 'index',
       'workspace' : 'workspace',

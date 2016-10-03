@@ -1,9 +1,11 @@
 define([
   'views/base_view',
-  'hbs!tmpls/workspace'
+  'hbs!tmpls/workspace',
+  'commander'
 ], function(
   BaseView,
-  WorkspaceTmpl
+  WorkspaceTmpl,
+  Commander
 ) {
 
   'use strict';
@@ -18,7 +20,23 @@ define([
    */
   var WorkspaceView = BaseView.extend({
 
-    template: WorkspaceTmpl,
+    template : WorkspaceTmpl,
+
+    ui: {
+      transTestBtn : '#js-trans-test-btn',
+    },
+
+    events: {
+      'click @ui.transTestBtn' : '_onClickTransTestBtn',
+    },
+
+
+    _onClickTransTestBtn: function()
+    {
+      console.log('clicked');
+
+      Commander.command.execute('route', '');
+    },
 
   });
 
