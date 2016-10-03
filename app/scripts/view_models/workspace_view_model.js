@@ -1,7 +1,9 @@
 define([
-  'view_models/base_view_model'
+  'view_models/base_view_model',
+  'services/http_client_service'
 ], function(
-  BaseViewModel
+  BaseViewModel,
+  HttpClient
 ) {
 
   'use strict';
@@ -21,6 +23,20 @@ define([
       this._super();
 
       console.log('This is workspace.');
+
+      var request = HttpClient.createRequestModel({
+        type: 'GET',
+        url : 'https://jsonplaceholder.typicode.com/posts',
+      });
+
+      console.log('send');
+      HttpClient.send(request).then(function(response) {
+        console.log('response');
+        console.log(response);
+      },
+      function(err) {
+        console.error(err);
+      });
     },
 
   });
