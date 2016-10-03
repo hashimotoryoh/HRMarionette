@@ -1,0 +1,16 @@
+{
+  "name": "HRMarionette",
+  "homepage": "https://github.com/hashimotoryoh/HRMarionette",
+  "authors": [
+    "Ryoh Hashimoto <hashimotoryoh@gmail.com>"
+  ],
+  "description": "フロントエンド開発用のJavascriptライブラリ",
+  "main": "",
+  "license": "MIT",
+  "dependencies": {
+    "backbone.marionette": "2.2.2",
+    "requirejs": "2.1.15",
+    "handlebars": "2.0.0",
+    "backbone-super": "1.0.2"
+  }
+}
