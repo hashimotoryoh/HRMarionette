@@ -28,6 +28,10 @@ define([
       Application.router.navigate('#'+route, !options.silent);
     });
 
+    Commander.command.setHandler('error', function() {
+      Application.router.navigate('#error', true);
+    });
+
   });
 
   Application.start();
