@@ -42,6 +42,7 @@ require.config({
 
     // テンプレートは scripts/ 以下じゃないのでここでショートカットを定義しておく必要がある。
     'tmpls'   : '../templates',
+    'styles'  : '../styles',
     'configs' : '../configs',
     'config'  : '../configs/config',
   }
