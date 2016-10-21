@@ -35,14 +35,13 @@ require.config({
     'backbone.marionette' : '../bower_components/backbone.marionette/lib/core/backbone.marionette.min',
     'hbs'                 : '../bower_components/requirejs-hbs/hbs',
     'text'                : '../bower_components/requirejs-text/text',
-    // 'bluebird': '../bower_components/bluebird/js/browser/bluebird',
-    // 'template_helpers/helper': './template_helpers/helper'
 
     'application' : './application',
 
     // テンプレートは scripts/ 以下じゃないのでここでショートカットを定義しておく必要がある。
     'tmpls'   : '../templates',
     'styles'  : '../styles',
+    'helpers' : './helpers',
     'configs' : '../configs',
     'config'  : '../configs/config',
   }
