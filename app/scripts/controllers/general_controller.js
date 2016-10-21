@@ -4,6 +4,8 @@ define([
 
   'views/index_view',
   'view_models/index_view_model',
+  'views/error_view',
+  'view_models/error_view_model',
   'views/workspace_view',
   'view_models/workspace_view_model',
 ], function(
@@ -12,10 +14,11 @@ define([
 
   IndexView,
   IndexViewModel,
+  ErrorView,
+  ErrorViewModel,
   WorkspaceView,
   WorkspaceViewModel
 ) {
-
   'use strict';
 
 
@@ -35,6 +38,11 @@ define([
     index: function()
     {
       var view = this._createView(IndexView, IndexViewModel);
+      this.contentsLayout.main.show(view);
+    },
+    error: function()
+    {
+      var view = this._createView(ErrorView, ErrorViewModel);
       this.contentsLayout.main.show(view);
     },
     workspace: function()
