@@ -1,7 +1,9 @@
 define([
-  'backbone.marionette'
+  'backbone.marionette',
+  'commander',
 ], function(
-  Marionette
+  Marionette,
+  Commander
 ) {
 
   'use strict';

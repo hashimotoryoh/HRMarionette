@@ -11,7 +11,8 @@ define([
 
   var Commander = Marionette.Controller.extend({
 
-    command : new Backbone.Wreqr.Commands(),
+    mediator : new Backbone.Wreqr.EventAggregator(),
+    command  : new Backbone.Wreqr.Commands(),
 
   });
 
