@@ -1,0 +1,5 @@
+var AppConfig = {
+
+  AppName : 'HRMarionette',
+
+};

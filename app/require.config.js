@@ -41,6 +41,8 @@ require.config({
     'application' : './application',
 
     // テンプレートは scripts/ 以下じゃないのでここでショートカットを定義しておく必要がある。
-    'tmpls' : '../templates',
+    'tmpls'   : '../templates',
+    'configs' : '../configs',
+    'config'  : '../configs/config',
   }
 });
