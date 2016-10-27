@@ -42,9 +42,11 @@ define([
       };
     },
 
-    initialize: function(options = {})
+    initialize: function(options)
     {
       this._super();
+
+      options = _.isUndefined(options) ? {} : options;
 
       if (_.has(options, 'type') && _.contains(_.values(this.Type), options.type))
         this.set({ 'type' : options.type });

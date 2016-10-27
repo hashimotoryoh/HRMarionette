@@ -20,7 +20,9 @@ define([
     Application.router = RouterFactory.makeRouter(location.pathname);
     Backbone.history.start();
 
-    Commander.command.setHandler('route', function(route, options={}) {
+    Commander.command.setHandler('route', function(route, options) {
+      options = _.isUndefined(options) ? {} : options;
+
       // options.silent はデフォルトで`false`
       options.silent = _.has(options, 'silent') ? options.silent : false;
 
