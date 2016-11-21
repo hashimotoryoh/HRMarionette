@@ -2,6 +2,7 @@ define([
   'backbone.marionette',
   'views/header_layout_view',
   'views/contents_layout_view',
+  'views/footer_layout_view',
 
   'views/index_view',
   'view_models/index_view_model',
@@ -13,6 +14,7 @@ define([
   Marionette,
   HeaderLayoutView,
   ContentsLayoutView,
+  FooterLayoutView,
 
   IndexView,
   IndexViewModel,
@@ -28,6 +30,7 @@ define([
 
     headerLayout   : null,
     contentsLayout : null,
+    footerLayout   : null,
 
 
     initialize: function()
@@ -37,6 +40,9 @@ define([
 
       this.contentsLayout = new ContentsLayoutView();
       this.contentsLayout.render();
+
+      this.footerLayout = new FooterLayoutView();
+      this.footerLayout.render();
     },
 
 
