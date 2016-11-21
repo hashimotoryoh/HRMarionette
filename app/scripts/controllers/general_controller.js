@@ -1,5 +1,6 @@
 define([
   'backbone.marionette',
+  'views/header_layout_view',
   'views/contents_layout_view',
 
   'views/index_view',
@@ -10,6 +11,7 @@ define([
   'view_models/workspace_view_model',
 ], function(
   Marionette,
+  HeaderLayoutView,
   ContentsLayoutView,
 
   IndexView,
@@ -24,8 +26,15 @@ define([
 
   var GeneralController = Marionette.Controller.extend({
 
+    headerLayout   : null,
+    contentsLayout : null,
+
+
     initialize: function()
     {
+      this.headerLayout = new HeaderLayoutView();
+      this.headerLayout.render();
+
       this.contentsLayout = new ContentsLayoutView();
       this.contentsLayout.render();
     },
