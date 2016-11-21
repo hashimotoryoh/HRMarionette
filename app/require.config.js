@@ -35,6 +35,7 @@ require.config({
     'backbone.marionette' : '../bower_components/backbone.marionette/lib/core/backbone.marionette.min',
     'hbs'                 : '../bower_components/requirejs-hbs/hbs',
     'text'                : '../bower_components/requirejs-text/text',
+    'bootstrap'           : '../bower_components/bootstrap/dist/js/bootstrap.min',
 
     'application' : './application',
 
